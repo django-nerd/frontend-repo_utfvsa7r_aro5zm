@@ -15,14 +15,16 @@
   html {
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 
   body {
     @apply antialiased;
+    color-scheme: dark;
   }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
+/* Custom utility classes for subtle motion */
 @layer utilities {
   .animate-in {
     animation-name: animateIn;
@@ -42,5 +44,11 @@
     --tw-exit-rotate: initial;
     --tw-exit-translate-x: initial;
     --tw-exit-translate-y: initial;
+  }
+
+  /* Organic blob for quick composition */
+  .blob {
+    background: radial-gradient(35% 35% at 30% 30%, rgba(34,197,94,.35), rgba(34,197,94,.12) 60%, rgba(34,197,94,0) 70%);
+    filter: blur(20px);
   }
 }
